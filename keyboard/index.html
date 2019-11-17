@@ -1,0 +1,214 @@
+<html>
+  <head>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "ea9b529d-65e2-4f36-bf5a-cb844026414e",
+    });
+  });
+</script>
+
+  <?php
+    include_once("sdfasdfsfASDCAKLSBDJAH.php");
+  ?>
+
+
+
+<script type="text/javascript">
+			function getCurrentDate(){
+				var curDate=new Date();
+				document.getElementById("showDate").innerHTML = curDate.toString();
+			}
+		</script>
+
+
+
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+  <script>
+window.replainSettings = { id: 'afabc504-60a6-4b83-aa7d-366fed33c8f7' };
+(function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
+var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+})('https://widget.replain.cc/dist/client.js');
+</script>
+  
+  <style>
+    #main {
+  margin: 1rem;
+  padding: 1rem;
+  font-family: sans-serif;
+  */max-width: 28rem;*/
+  margin: 0 auto;
+  position: relative;
+}
+  </style>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="https://ms-jahan.github.io/sab1t/stylesheets/navigation.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <script type="text/javascript" src="https://www.google.com/jsapi">
+    </script>
+    <script type="text/javascript">
+
+      // Load the Google Transliterate API
+      google.load("elements", "1", {
+            packages: "transliteration"
+          });
+
+      var transliterationControl;
+      function onLoad() {
+        var options = {
+            sourceLanguage: 'en',
+            destinationLanguage: ['bn','ar','hi','kn','ml','ta','te'],
+            transliterationEnabled: true,
+            shortcutKey: 'alt+w'
+        };
+        // Create an instance on TransliterationControl with the required
+        // options.
+        transliterationControl =
+          new google.elements.transliteration.TransliterationControl(options);
+
+        // Enable transliteration in the textfields with the given ids.
+        var ids = [ "transl1", "transl2" ];
+        transliterationControl.makeTransliteratable(ids);
+
+        // Add the STATE_CHANGED event handler to correcly maintain the state
+        // of the checkbox.
+        transliterationControl.addEventListener(
+            google.elements.transliteration.TransliterationControl.EventType.STATE_CHANGED,
+            transliterateStateChangeHandler);
+
+        // Add the SERVER_UNREACHABLE event handler to display an error message
+        // if unable to reach the server.
+        transliterationControl.addEventListener(
+            google.elements.transliteration.TransliterationControl.EventType.SERVER_UNREACHABLE,
+            serverUnreachableHandler);
+
+        // Add the SERVER_REACHABLE event handler to remove the error message
+        // once the server becomes reachable.
+        transliterationControl.addEventListener(
+            google.elements.transliteration.TransliterationControl.EventType.SERVER_REACHABLE,
+            serverReachableHandler);
+
+        // Set the checkbox to the correct state.
+        document.getElementById('checkboxId').checked =
+          transliterationControl.isTransliterationEnabled();
+
+        // Populate the language dropdown
+        var destinationLanguage =
+          transliterationControl.getLanguagePair().destinationLanguage;
+        var languageSelect = document.getElementById('languageDropDown');
+        var supportedDestinationLanguages =
+          google.elements.transliteration.getDestinationLanguages(
+            google.elements.transliteration.LanguageCode.ENGLISH);
+        for (var lang in supportedDestinationLanguages) {
+          var opt = document.createElement('option');
+          opt.text = lang;
+          opt.value = supportedDestinationLanguages[lang];
+          if (destinationLanguage == opt.value) {
+            opt.selected = true;
+          }
+          try {
+            languageSelect.add(opt, null);
+          } catch (ex) {
+            languageSelect.add(opt);
+          }
+        }
+        // Adding support for Bengali Dari
+      document.getElementById("buttondari").addEventListener('click', function () {
+		var text = document.getElementById('transl2');
+		text.value += '।';
+		});
+
+	  document.onkeyup=function(e){
+		var e = e || window.event; // for IE to cover IEs window event-object
+		if(e.altKey && e.which == 81) {
+			var text = document.getElementById('transl2');
+			text.value += '।';
+			return false;
+		}
+	}
+      }
+
+      // Handler for STATE_CHANGED event which makes sure checkbox status
+      // reflects the transliteration enabled or disabled status.
+      function transliterateStateChangeHandler(e) {
+        document.getElementById('checkboxId').checked = e.transliterationEnabled;
+      }
+
+      // Handler for checkbox's click event.  Calls toggleTransliteration to toggle
+      // the transliteration state.
+      function checkboxClickHandler() {
+        transliterationControl.toggleTransliteration();
+      }
+
+      // Handler for dropdown option change event.  Calls setLanguagePair to
+      // set the new language.
+      function languageChangeHandler() {
+        var dropdown = document.getElementById('languageDropDown');
+        transliterationControl.setLanguagePair(
+            google.elements.transliteration.LanguageCode.ENGLISH,
+            dropdown.options[dropdown.selectedIndex].value);
+      }
+
+      // SERVER_UNREACHABLE event handler which displays the error message.
+      function serverUnreachableHandler(e) {
+        document.getElementById("errorDiv").innerHTML =
+            "Transliteration Server unreachable";
+      }
+
+      // SERVER_UNREACHABLE event handler which clears the error message.
+      function serverReachableHandler(e) {
+        document.getElementById("errorDiv").innerHTML = "";
+      }
+      google.setOnLoadCallback(onLoad);
+      
+      
+    </script>
+  </head>
+  <body onLoad='getCurrentDate()'>
+  
+  <div class="topnav">
+  <a href="https://ms-jahan.github.io/sab1t/">Home</a>
+  <a target="_blank" href="https://ms-jahan.github.io/sab1t/cybermap">Real-time Cybermap</a>
+  <a class="active" href="https://ms-jahan.github.io/sab1t/keyboard">Keyboard</a>
+  <a href="https://ms-jahan.github.io/sab1t/recorder">Sound Recorder</a>
+  <a href="https://ms-jahan.github.io/sab1t/speedtest">Check Your Internet Speed</a>
+  <a target="_blank" href="http://thesakib.com/ftp">High Speed FTP Sites (External)</a>
+  <a target="_blank" href="http://sabit24.tk/cheap-domains">Cheap Domain Names (External)</a>
+</div>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script
+type="text/javascript"
+src="http://tareq.wedevs.com/bangla_date_widget.php">
+var d=new Date();
+var weekday=new Array(7);
+weekday[0]="রবিবার )";
+weekday[1]="সোমবার )";
+weekday[2]="মঙ্গলবার )";
+weekday[3]="বুধবার )";
+weekday[4]="বৃহস্পতিবার )";
+weekday[5]="শুক্রবার )";
+weekday[6]="শনিবার )";
+document.write(" ( " + weekday[d.getDay()]);
+</script>,
+&nbsp;<i id="showDate"></i>
+
+
+  <div id="main">
+  <center>Type in Indian languages [Press Alt+w to toggle between English and checked language (Default: Bengali).]</center>
+    <div id='translControl'>
+      <input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()"></input>
+      Type in <select id="languageDropDown" onchange="javascript:languageChangeHandler()"></select>
+    </div>
+    <br>Title : <input type='textbox' id="transl1"/>
+    <br>Body<br><textarea id="transl2" style="width:600px;height:200px"></textarea><br><br>
+    [Press Alt+q for Bengali Dari (।) input]<br><br>
+    <input type="button" value="Bengali Dari (।)" id="buttondari" />
+    <br><div id="errorDiv"></div>
+    </div>
+    
+  </body>
+</html>
