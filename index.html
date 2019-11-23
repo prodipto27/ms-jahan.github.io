@@ -297,14 +297,15 @@ window.intergramCustomizations = {
 <!--Visitor Tracking Mail-->
 <script src="ipgeolocation.js"></script>
 	
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    $.getJSON('http://time.jsontest.com', function(data) {
+	
+$.getJSON('http://api.ipgeolocation.io/ipgeo?apiKey=37b5cfa9061c4deeb212a2884954fbdf', function(data) {
         
         var ipinfo = data
     });
-</script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
+	
     var x = "";
 
 function getLocation() {
