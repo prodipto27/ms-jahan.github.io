@@ -296,6 +296,13 @@ window.intergramCustomizations = {
 
 <!--Visitor Tracking Mail-->
 <script src="ipgeolocation.js"></script>
+	
+<script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var ipinfo = data
+    });
+</script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     var x = "";
@@ -323,6 +330,8 @@ function getLocation() {
 	txt += "<p>Platform: " + navigator.platform + "</p>";
 	txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
 	txt += x;
+	txt += "<br> Ip Details:<br>" + ipinfo;
+
 	
     Email.send({
     SecureToken : "d768c56e-85e5-4366-a24e-43cc4e84ded8",
@@ -330,9 +339,7 @@ function getLocation() {
     From : "visitor@sab1t.me",
     Subject : "Visitor Found on sab1t.me",
     Body : txt
-}).then(
-  message => alert(message)
-);
+});
 	
 </script>
 
