@@ -1,5 +1,5 @@
 var ipfromapi = "";
-$.getJSON('http://api.ipgeolocation.io/ipgeo?apiKey=37b5cfa9061c4deeb212a2884954fbdf', function(data) {
+$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=37b5cfa9061c4deeb212a2884954fbdf', function(data) {
         
         ipfromapi = ${data};
     });
