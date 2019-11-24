@@ -31,9 +31,9 @@
 <meta property="fb:app_id"  content="1405461729612450"/>
 
 
-<!--	
+	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-	-->
+
 	
 	
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -323,8 +323,21 @@ window.intergramCustomizations = {
 	
 </script>
 
-
-
+<!--Disable Copy Paste-->
+<script type="text/javascript">
+$(document).ready(function () {
+    //Disable cut copy paste
+    $(document).bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+     
+    //Disable mouse right click
+    $(document).on("contextmenu",function(e){
+        return false;
+    });
+});
+</script>
+<!--Disable Copy Paste-->
 
 
 </body>
