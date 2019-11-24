@@ -297,7 +297,7 @@ window.intergramCustomizations = {
 <!--Visitor Tracking Mail-->
 <!--<script src="ipgeolocation.js"></script>-->
 	
-
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 	
@@ -310,6 +310,7 @@ window.intergramCustomizations = {
 	txt += "<p>Browser Online: " + navigator.onLine + "</p>";
 	txt += "<p>Platform: " + navigator.platform + "</p>";
 	txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+	txt += "<p> Ip Address: " + userip;
 
 	
     Email.send({
