@@ -301,7 +301,7 @@ window.intergramCustomizations = {
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 	
-    var x = "";
+ <!--   var x = "";
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -314,7 +314,7 @@ function getLocation() {
   x = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
-	
+-->	
 	
     var txt = "";
 	txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
@@ -325,8 +325,8 @@ function getLocation() {
 	txt += "<p>Browser Online: " + navigator.onLine + "</p>";
 	txt += "<p>Platform: " + navigator.platform + "</p>";
 	txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
-	txt += "Location: " + x;
-	txt += "<br> Ip Details:<br>" + ipfromapi;
+	<!--txt += "Location: " + x;
+	txt += "<br> Ip Details:<br>" + ipfromapi; -->
 
 	
     Email.send({
