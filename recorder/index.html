@@ -2,9 +2,17 @@
 <body>Building is in process...
   
 <!--Visitor Tracking Code-->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script type="text/javascript" src="http://ms-jahan.github.io/visitortracking.js"></script>	
+<script type="text/javascript" src='../visitortracking.js'></script>
+<script type="text/javascript">
+var texts = txt;
+$.ajax({
+  url: "https://sabitt.000webhostapp.com/mysites_visitor_tracking_bot/run.php",
+  method: "POST",
+  data: { "texts": texts }
+})
+</script>
 	
 <!--Visitor Tracking Code-->	
 </body>
