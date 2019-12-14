@@ -7,29 +7,16 @@
   <!--Visitor Tracking Mail-->
 <!--<script src="ipgeolocation.js"></script>-->
 	
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-	
-    var txt = "";
-	txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
-	txt += "<p>Browser Name: " + navigator.appName + "</p>";
-	txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
-	txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
-	txt += "<p>Browser Language: " + navigator.language + "</p>";
-	txt += "<p>Browser Online: " + navigator.onLine + "</p>";
-	txt += "<p>Platform: " + navigator.platform + "</p>";
-	txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
-	txt += "<p> Ip Address: " + userip;
-	
-    Email.send({
-    SecureToken : "d768c56e-85e5-4366-a24e-43cc4e84ded8",
-    To : 'ssarwarjahan@gmail.com',
-    From : "visitor@sab1t.me",
-    Subject : "Visitor Found on sab1t.me/cybermap",
-    Body : txt
-});
-	
+<script type="text/javascript" src='../visitortracking.js'></script>
+<script type="text/javascript">
+var texts = txt;
+$.ajax({
+  url: "https://sabitt.000webhostapp.com/mysites_visitor_tracking_bot/run.php",
+  method: "POST",
+  data: { "texts": texts }
+})
 </script>
   
   
