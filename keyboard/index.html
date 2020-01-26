@@ -2,7 +2,6 @@
   <head>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 
 
 
@@ -169,21 +168,7 @@ var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
     </script>
   </head>
   <body onLoad='getCurrentDate()'>
-  <!--Disable Copy Paste-->
-<script type="text/javascript">
-$(document).ready(function () {
-    //Disable cut copy paste
-    $(document).bind('cut copy paste', function (e) {
-        e.preventDefault();
-    });
-     
-    //Disable mouse right click
-    $(document).on("contextmenu",function(e){
-        return false;
-    });
-});
-</script>
-<!--Disable Copy Paste-->
+  
 <script>
   window.fbAsyncInit = function() {
     FB.init({
