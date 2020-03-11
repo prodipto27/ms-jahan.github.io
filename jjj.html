@@ -1,0 +1,121 @@
+<div>
+<style>
+#ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+#li {
+  float: left;
+}
+
+#a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#li:hover {
+  background-color: #111111;
+}
+
+#font {
+  margin: auto;
+  color: white;
+  font-size: 30;
+  background-color: gray;
+}
+
+#font:hover {
+  background-color: #000000;
+}
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+
+
+<p id='font' align='center'>Hourly Worldwide Corona Virus Latest Update</p>
+
+<ul id='ul'>
+  <li id='li'><a id='a' href="#">Infected: <font style="color:red;" size='5px' id='infected'></font></a></li>
+  <li id='li'><a id='a' href="#">Dead: <font style="color:gray;" size='5px' id='dead'></font></a></li>
+  <li id='li'><a id='a' href="#">Recovered: <font style="color:green;" size='5px' id='recovered'></font></a></li>
+  <li id='li'><a id='a' href="#">Sick: <font style="color:LightBlue;" size='5px' id='sick'></font></a></li>
+  <li id='li'><a id='a' href="#">(Last update <font style="color:white;" size='5px' id='minutes'></font> minutes ago!)</a></li>
+</ul>
+
+<script type="text/javascript" src="http://vps.sab1t.me/infected.js?var=infected"></script>
+<script type="text/javascript" src="http://vps.sab1t.me/infected.js?var=infected"></script>
+
+
+<script type="text/javascript" src="http://vps.sab1t.me/minutes.js?var=minutes"></script>
+<script type="text/javascript" src="http://vps.sab1t.me/minutes.js?var=minutes"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+var inf = infected;
+var sic = sick;
+var ded = dead;
+var rec = recovered; 
+
+
+function alertWorld1(){
+	document.getElementById("infected").innerHTML = inf;
+}
+
+function alertWorld2(){
+	document.getElementById("dead").innerHTML = ded;
+}
+
+function alertWorld3(){	
+	document.getElementById("recovered").innerHTML = rec;
+}
+	
+function alertWorld4(){
+	document.getElementById("sick").innerHTML = sic;
+}
+
+function alertWorld5(){
+	document.getElementById("minutes").innerHTML = minutes;
+}
+
+
+setTimeout(alertWorld1, 1000);
+setTimeout(alertWorld2, 1000);
+setTimeout(alertWorld3, 1000);
+setTimeout(alertWorld4, 1000);
+setTimeout(alertWorld5, 2000);
+
+
+
+</script>
+</div>
+
+
+
+
+<!--
+
+
+
+<script type="text/javascript" src="hahaha.js?var=haha"></script>
+<script type="text/javascript" src="infected.js?var=infected"></script>
+<script type="text/javascript" src="dead.js?var=dead"></script>
+<script type="text/javascript" src="recovered.js?var=recovered"></script>
+<script type="text/javascript" src="sick.js?var=sick"></script>
+<script type="text/javascript" src="minutes.js?var=minutes"></script>
+-->
