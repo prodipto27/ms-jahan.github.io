@@ -1,5 +1,5 @@
 var txt = "";
-	txt += "Url: " + window.location.href + "\n";
+	txt += "Url: " + location.href + "\n";
 	txt += "Browser CodeName: " + navigator.appCodeName + "\n";
 	txt += "Browser Name: " + navigator.appName + "\n";
 //	txt += "Browser Version: " + navigator.appVersion + "\n";
